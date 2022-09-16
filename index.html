@@ -28,12 +28,14 @@
         </header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-3" style="background-color:cornflowerblue; padding-bottom:400px;"><img src="./images/flag-of-colombia-and-plane-on-the-world-map-photo.png" style="margin-top:5px;margin-bottom:15px;"> Destino
+                <div class="col-3" id="destino" style="background-color:cornflowerblue; padding-bottom:400px;"><img src="./images/flag-of-colombia-and-plane-on-the-world-map-photo.png" style="margin-top:5px;margin-bottom:15px;"> Destino
                     <select aria-label="select example" style="padding-right:45px;">
                         <option selected>Escoja su destino</option>
                         <option value="1">Medellin----------------------------------$100.000</option>
                         <option value="2">Cali--------------------------------------$90.000</option>
                         <option value="3">Bogota------------------------------------$150.000</option>
+                        <option value="4">Pereira-----------------------------------$75.000</option>
+                        <option value="5">Manizales---------------------------------$105.000</option>
                     </select>
                     <br>
                     <button type="button" class="btn btn-secondary btn-sm" style="margin-top:10px;">Enviar</button>
@@ -42,14 +44,14 @@
                     <br>
                     <br>
                     <label for="texto">Ingrese el peso de las maletas</label>
-                    <input style="padding-left:45px; margin-top:10px;" list="datalistOptions" id="exampleDataList" placeholder="" style="text-align:left">
+                    <input style="padding-left:45px; margin-top:10px;" list="datalistOptions" id="PesoMaletas" placeholder="" style="text-align:left">
                     <br>
                     <button type="button" class="btn btn-secondary btn-sm" style="margin-top:10px;">Enviar</button>
                     <br>
                     <br>
                     <br>
                     <br>
-                    <select aria-label="select example" style="padding-right:45px;">
+                    <select id="asiento" aria-label="select example" style="padding-right:45px;">
                         <option selected>Escoja el tipo de silla</option>
                         <option value="1">Normal</option>
                         <option value="2">Ejecutiva</option>
@@ -62,8 +64,11 @@
                 <div class="col-4" style="background-color:cornflowerblue;margin-left:5px; ">
                     <div class="container-fluid">
                         <label for="texto">Cantidad de pasajeros</label>
-                        <input class="form-control" style="padding-left:10px;margin-top:10px;" list="datalistOptions" id="exampleDataList" placeholder="" style="text-align:left"><button type="button" class="btn btn-secondary btn-sm" style="margin-top:15px;">Liquidar tiquetes</button>
+                        <input class="form-control" style="padding-left:10px;margin-top:10px;" list="datalistOptions" id="CantidadPasajeros" placeholder="" style="text-align:left">
+                        <button type="button" class="btn btn-secondary btn-sm" style="margin-top:15px;" onclick="precio()">Liquidar tiquetes</button>
+                        <div id="capaMostrar"></div>
                     </div>
+                    
                 </div>
                 <div class="col-4" style="background-color:cornflowerblue; padding-bottom:400px;padding-right:760px; margin-left:5px;">
                     <div class="container-fluid">
@@ -82,6 +87,7 @@
                     </div>
                 </footer>
 
+                <script src="./main.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 
