@@ -1,46 +1,41 @@
 function precio() {
-  let pasajeros = document.getElementById("CantidadPasajeros").value;
+  let pasajeros = Number(document.getElementById("CantidadPasajeros").value);
   let ciudad = document.getElementById("destino").value;
-  let pesoMaleta = document.getElementById("PesoMaletas").value;
+  let pesoMaleta = Number(document.getElementById("PesoMaletas").value);
   let tipoAsiento = document.getElementById("asiento").value;
   let totalAsiento = 0;
   let tiquete = 0;
   let pagoAdicional = 0;
-  let totalPago = 0;
+  let totalPago;
 
-  if (ciudad == 1) {
+  if (ciudad == "Medellin") {
     tiquete = 100000 * pasajeros;
   }
-  if (ciudad == 2) {
+  if (ciudad == "Cali") {
     tiquete = 90000 * pasajeros;
   }
-  if (ciudad == 3) {
+  if (ciudad == "Bogota") {
     tiquete = 150000 * pasajeros;
   }
-  if (ciudad == 4) {
+  if (ciudad == "Pereira") {
     tiquete = 75000 * pasajeros;
   }
-  if (ciudad == 5) {
+  if (ciudad == "Manizales") {
     tiquete = 105000 * pasajeros;
   }
   if (pesoMaleta > 50) {
     pagoAdicional = (pesoMaleta - 50) * 15000;
   }
-  if (tipoAsiento == 1) {
+  if (tipoAsiento == "Normal") {
     totalAsiento = 0 * pasajeros;
   }
-  if (tipoAsiento == 2) {
+  if (tipoAsiento == "Ejecutiva") {
     totalAsiento = 20000 * pasajeros;
   }
-  if (tipoAsiento == 3) {
+  if (tipoAsiento == "VIP(Incluye copa de Whiskey)") {
     totalAsiento = 40000 * pasajeros;
   }
-  totalPago =
-    "la ciudad donde usted va es: " +
-    ciudad +
-    tiquete +
-    pagoAdicional +
-    totalAsiento;
+  totalPago = tiquete + pagoAdicional + totalAsiento;
   let factura = document.getElementById("capaMostrar");
 
   factura.innerHTML =

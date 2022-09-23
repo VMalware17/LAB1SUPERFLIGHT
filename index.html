@@ -28,14 +28,14 @@
         </header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-3" id="destino" style="background-color:cornflowerblue; padding-bottom:400px;"><img src="./images/flag-of-colombia-and-plane-on-the-world-map-photo.png" style="margin-top:5px;margin-bottom:15px;"> Destino
-                    <select aria-label="select example" style="padding-right:45px;">
-                        <option selected>Escoja su destino</option>
-                        <option value="1">Medellin----------------------------------$100.000</option>
-                        <option value="2">Cali--------------------------------------$90.000</option>
-                        <option value="3">Bogota------------------------------------$150.000</option>
-                        <option value="4">Pereira-----------------------------------$75.000</option>
-                        <option value="5">Manizales---------------------------------$105.000</option>
+                <div class="col-3"  style="background-color:cornflowerblue; padding-bottom:400px;"><img src="./images/flag-of-colombia-and-plane-on-the-world-map-photo.png" style="margin-top:5px;margin-bottom:15px;"> Destino
+                    <select aria-label="select example" id="destino" style="padding-right:45px;">
+                        
+                        <option value="Medellin">Medellin</option>
+                        <option value="Cali">Cali</option>
+                        <option value="Bogota">Bogota</option>
+                        <option value="Pereira">Pereira</option>
+                        <option value="Manizales">Manizales</option>
                     </select>
                     <br>
                     <button type="button" class="btn btn-secondary btn-sm" style="margin-top:10px;">Enviar</button>
@@ -53,9 +53,9 @@
                     <br>
                     <select id="asiento" aria-label="select example" style="padding-right:45px;">
                         <option selected>Escoja el tipo de silla</option>
-                        <option value="1">Normal</option>
-                        <option value="2">Ejecutiva</option>
-                        <option value="3">VIP(Incluye copa de Whiskey)</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Ejecutiva">Ejecutiva</option>
+                        <option value="VIP(Incluye copa de Whiskey)">VIP(Incluye copa de Whiskey)</option>
                     </select>
                     <br>
                     <button type="button" class="btn btn-secondary btn-sm" style="margin-top:10px;">Enviar</button>
